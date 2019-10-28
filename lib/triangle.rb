@@ -21,6 +21,7 @@ class Triangle
   end
 
   def invalid_triangle?
+    sides. {|side| side==0} 
     sides.any? { |side| side <= 0 } || sides[0] + sides[1] <= sides[2]
   end
 end

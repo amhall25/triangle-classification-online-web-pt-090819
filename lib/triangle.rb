@@ -1,4 +1,10 @@
 class Triangle
+  
+class TriangleError < StandardError
+  def message
+    "That's no triangle. Of that I'm sure."
+  end
+end
   attr_reader :hypotenuse, :adjacent, :opposite, :sides
  	
   def initialize(hypotenuse, adjacent, opposite)

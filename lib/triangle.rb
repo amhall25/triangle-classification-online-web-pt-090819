@@ -9,7 +9,7 @@ class Triangle
   end
 
   def kind
-    if invalid_triangle?\
+    if invalid_triangle?
       raise TriangleError
     elsif sides.uniq.length == 1
       :equilateral

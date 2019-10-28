@@ -30,4 +30,4 @@ class TriangleError < StandardError
     "That's no triangle. Of that I'm sure."
   end
 end
-end
+

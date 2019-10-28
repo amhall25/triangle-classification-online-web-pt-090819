@@ -6,7 +6,7 @@ class Triangle
     @adjacent = adjacent
     @opposite = opposite
     @sides = [hypotenuse, adjacent, opposite].sort
-    if hypotenuse == nil || adjacent == nil ||opposite == nil
+    if hypotenuse == nil && adjacent == nil && opposite == nil
       raise TriangleError
     end
   end

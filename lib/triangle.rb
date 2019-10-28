@@ -6,6 +6,9 @@ class Triangle
     @adjacent = adjacent
     @opposite = opposite
     @sides = [hypotenuse, adjacent, opposite].sort
+    if hypotenuse == nil || adjacent == nil ||opposite == nil
+      raise TriangleError
+    end
   end
 
   def kind
@@ -21,7 +24,7 @@ class Triangle
   end
 
   def invalid_triangle?
-    @hypotenuse == 0 && @adjacent ==0 && @opposite ==0 || sides.any? { |side| side <= 0 } || sides[0] + sides[1] <= sides[2]
+   sides.any? { |side| side <= 0 } || sides[0] + sides[1] <= sides[2]
   end
 end
 
